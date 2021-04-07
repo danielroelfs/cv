@@ -8,11 +8,9 @@
 # Knit the HTML version
 rmarkdown::render("cv.rmd",
                   params = list(pdf_mode = FALSE),
-                  output_file = "index.html")
-
-rmarkdown::render("cv.rmd",
-                  params = list(pdf_mode = FALSE),
                   output_file = "roelfs_cv.html")
+
+file.copy(from = "roelfs_cv.html", to = "index.html", overwrite = TRUE)
 
 # Knit the PDF version to temporary html location
 tmp_html_cv_loc <- fs::file_temp(ext = ".html")

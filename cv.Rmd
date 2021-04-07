@@ -11,12 +11,11 @@ output:
     self_contained: true
 ---
 
-```{r, include=FALSE}
-knitr::opts_chunk$set(
-  results='asis', 
-  echo = FALSE
-)
+```{r knits-opts, include=FALSE}
+knitr::opts_chunk$set(results="asis", echo = FALSE)
+```
 
+```{r setup}
 library(magrittr) # For the pipe
 source("cv_printing_functions.r")
 
@@ -31,8 +30,8 @@ CV <- create_CV_object(
 
 ```{r}
 # When in pdf export mode the little dots are unaligned, so fix that with some conditional CSS.
-if(params$pdf_mode) {
-    cat("
+if (params$pdf_mode) {
+  cat("
 <style>
 :root{
   --decorator-outer-offset-left: -6.5px;
