@@ -134,6 +134,12 @@ Clinical Experience {data-icon=suitcase}
 CV %<>% print_section("work_experience")
 ```
 
+Awards {data-icon=award}
+--------------------------------------------------------------------------------
+
+```{r}
+CV %<>% print_section("awards")
+```
 
 Commissions {data-icon=chalkboard-teacher}
 --------------------------------------------------------------------------------
