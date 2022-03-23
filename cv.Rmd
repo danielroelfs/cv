@@ -7,8 +7,10 @@ params:
     value: true
 output:
   pagedown::html_resume:
-    css: ["style.css", "resume"]
+    css: ["./style.css", "resume"]
     self_contained: true
+editor_options:
+  chunk_output_type: console
 ---
 
 ```{r knits-opts, include=FALSE}
@@ -17,7 +19,8 @@ knitr::opts_chunk$set(results="asis", echo = FALSE)
 
 ```{r setup}
 library(magrittr) # For the pipe
-source("cv_printing_functions.r")
+
+source("./cv_printing_functions.r")
 
 # Read in all data and initialize a CV printer object
 CV <- create_CV_object(
@@ -40,17 +43,17 @@ if (params$pdf_mode) {
 }
 ```
 
+<!-- Color scheme from http://test.ultralinx.co/wp-content/uploads/2020/02/1_beautiful-color-schemes-combinations-palettes-24.png -->
 
 Aside
 ================================================================================
 
-```{r}
+```{r show-image}
 # Build interactive network of positions colored by section
 # and connected if they occurred in the same year
 #datadrivencv::build_network_logo(CV$entries_data)
 knitr::include_graphics("https://danielroelfs.com/images/avatar.png")
 ```
-
 
 ```{r}
 if(params$pdf_mode){
@@ -63,26 +66,22 @@ if(params$pdf_mode){
 Contact {#contact}
 --------------------------------------------------------------------------------
 
-```{r}
+```{r print-contact}
 CV %>% print_contact_info()
 ```
 
-
-
-Skills {#skills}
+Skills & Languages {#skills}
 --------------------------------------------------------------------------------
 
-```{r}
-CV %>% print_skill_bars()
+```{r print-skill}
+CV %>% print_skill_bars(bar_color = "#4D8CB3", bar_background = "#C5DCEB") # was #447098
 ```
 
+<br>
 
-Disclaimer {#disclaimer}
---------------------------------------------------------------------------------
-
-Last updated on `r Sys.Date()`.
-
-
+```{r print-languages}
+CV %>% print_language_bars(bar_color = "#4D8CB3", bar_background = "#C5DCEB")
+```
 
 Main
 ================================================================================
@@ -96,16 +95,12 @@ CV %<>% print_text_block("intro")
 ```
 
 
-Research Experience {data-icon=laptop}
+Work Experience {data-icon=flask}
 --------------------------------------------------------------------------------
 
 ```{r}
-CV %<>% print_section("research_experience")
+CV %<>% print_section("work_experience")
 ```
-
-<br>
-<br>
-<br>
 
 Education {data-icon=graduation-cap data-concise=true}
 --------------------------------------------------------------------------------
@@ -121,17 +116,11 @@ CV %<>% print_section("education")
 ```
 
 
-Clinical Experience {data-icon=suitcase}
+Clinical Experience {data-icon=stethoscope}
 --------------------------------------------------------------------------------
 
-::: aside
 ```{r}
-#CV %<>% print_text_block("work_experience_aside")
-```
-:::
-
-```{r}
-CV %<>% print_section("work_experience")
+CV %<>% print_section("clinical_experience")
 ```
 
 Awards {data-icon=award}
@@ -141,40 +130,50 @@ Awards {data-icon=award}
 CV %<>% print_section("awards")
 ```
 
-Commissions {data-icon=chalkboard-teacher}
---------------------------------------------------------------------------------
 
-```{r}
-CV %<>% print_section("miscellaneous")
-```
-
-<br>
-<br>
-<br>
-
-Selected Writings  {data-icon=newspaper}
+Commissions {data-icon=suitcase}
 --------------------------------------------------------------------------------
 
 ::: aside
 ```{r}
-CV %<>% print_text_block("selected_blogposts_aside")
+CV %<>% 
+  print_text_block("commissions_aside")
 ```
 :::
 
 ```{r}
-CV %<>% print_section("selected_blogposts")
+CV %<>% print_section("commissions")
 ```
 
+Portfolio  {data-icon=newspaper}
+--------------------------------------------------------------------------------
+
+::: aside
+```{r}
+CV %<>% 
+  print_text_block("portfolio_aside")
+```
+:::
+
+```{r}
+CV %<>% print_section("portfolio")
+```
 
 Selected Publications {data-icon=book}
 --------------------------------------------------------------------------------
+
+::: aside
+```{r}
+CV %<>% 
+  print_text_block("publications_aside")
+```
+:::
 
 ```{r}
 CV %<>% print_section("publications")
 ```
 
+Disclaimer {#disclaimer}
+--------------------------------------------------------------------------------
 
-```{r}
-#CV %<>% print_links()
-```
-
+Last updated on `r Sys.Date()`.
