@@ -28,6 +28,9 @@ CV <- create_CV_object(
   pdf_mode = params$pdf_mode
 )
 
+CV$entries_data <- CV$entries_data %>% 
+  mutate(include = as.logical(include)) %>% 
+  filter(include)
 ```
 
 
@@ -101,6 +104,8 @@ Work Experience {data-icon=flask}
 ```{r}
 CV %<>% print_section("work_experience")
 ```
+
+<br>
 
 Education {data-icon=graduation-cap data-concise=true}
 --------------------------------------------------------------------------------
@@ -176,4 +181,4 @@ CV %<>% print_section("publications")
 Disclaimer {#disclaimer}
 --------------------------------------------------------------------------------
 
-Last updated on `r Sys.Date()`.
+Last updated on `r format(Sys.Date(), format="%d-%m-%Y")`
