@@ -105,7 +105,6 @@ Work Experience {data-icon=flask}
 CV %<>% print_section("work_experience")
 ```
 
-<br>
 
 Education {data-icon=graduation-cap data-concise=true}
 --------------------------------------------------------------------------------
@@ -149,6 +148,8 @@ CV %<>%
 ```{r}
 CV %<>% print_section("commissions")
 ```
+
+<br><br>
 
 Portfolio  {data-icon=newspaper}
 --------------------------------------------------------------------------------
