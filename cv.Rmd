@@ -55,12 +55,12 @@ Aside
 # Build interactive network of positions colored by section
 # and connected if they occurred in the same year
 #datadrivencv::build_network_logo(CV$entries_data)
-knitr::include_graphics("https://danielroelfs.com/images/avatar.png")
+knitr::include_graphics("https://danielroelfs.com/avatar.png")
 ```
 
 ```{r}
 if(params$pdf_mode){
-  cat("View this CV online with links at _danielroelfs.github.io/cv/_")
+  cat("View this CV online with links at _cv.danielroelfs.com_")
 } else {
   cat("[<i class='fas fa-download'></i> Download a PDF of this CV](https://github.com/danielroelfs/cv/raw/main/roelfs_cv.pdf)")
 }
