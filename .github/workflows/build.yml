@@ -66,5 +66,6 @@ jobs:
     steps:
       - name: 🚀 Deploy to GitHub Pages
         id: deployment
-        artifact_name: cv_files
         uses: actions/deploy-pages@v2
+        with:
+          artifact_name: cv_files
