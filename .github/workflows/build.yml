@@ -63,6 +63,9 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     needs: build
+    with:
+      name: build
+      path: cv_files
     steps:
       - name: 🚀 Deploy to GitHub Pages
         id: deployment
