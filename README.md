@@ -1,5 +1,5 @@
 # cv
 
-This repository hosts my online cv created with RMarkdown and the `{pagedown}` package.
+This repository hosts my online cv created with Quarto.
 
 Hosted using GitHub Pages

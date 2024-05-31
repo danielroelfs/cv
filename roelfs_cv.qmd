@@ -1,0 +1,205 @@
+---
+title: Daniel Roelfs
+format:
+  html:
+    include-in-header: 
+        - text: |
+            <link rel="stylesheet" href="https://use.typekit.net/jxt2fnp.css">
+            <link href="https://fonts.cdnfonts.com/css/cooper-hewitt" rel="stylesheet">
+            <script src="https://unpkg.com/pagedjs/dist/paged.polyfill.js"></script>
+            <link rel="stylesheet" type="text/css" href="css/print.css">
+            <link rel="stylesheet" type="text/css" href="css/pagedjs.css" media="screen">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/js/all.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    embed-resources: true
+params:
+    pdf_mode: false
+execute:
+    echo: false
+    output: asis
+    warning: false
+theme:
+    - css/cv_style.scss
+editor_options:
+  chunk_output_type: console
+---
+
+```{r}
+#| label: pkgs
+
+library(stringr)
+library(magrittr)
+```
+
+```{r}
+#| label: setup
+
+yaml_file <- yaml::read_yaml("info.yaml")
+
+yaml_to_df <- function(yaml_file, field) {
+    cols = c("item", names(yaml_file[[field]][[1]]))
+
+    df = data.frame()
+    for (item in names(yaml_file[[field]])) {
+        vec = c(item)
+        for (entry in cols) {
+            val = yaml_file[[field]][[item]][[entry]]
+            vec = c(vec, val)
+        }
+        names(vec) = cols
+        df <- df |> dplyr::bind_rows(vec)
+    }
+
+    return(df)
+}
+```
+
+::: {.socials}
+```{r}
+#| label: contact-info
+
+show_email <- FALSE
+
+yaml_to_df(yaml_file, "contact_info") %>%
+    {if(show_email) dplyr::filter(., str_detect(.$item, "email|e-mail", negate = TRUE)) else .} |>
+    str_glue_data("<a class='no-hover' href='{url}'><i class='{icon}'></i></a> ")
+
+if (params$pdf_mode) {
+    cat(" <span class='no-hover'>|</span> <a class='no-hover' href='https://cv.danielroelfs.com'><i class='fa-brands fa-safari'></i></a>")
+} else {
+    cat(" <span class='no-hover'>|</span> <a class='no-hover' href='roelfs_cv.pdf'><i class='fa-solid fa-download'></i></a>")
+}
+
+if (show_email) {
+    cat("\n
+    :::: {.email}\n
+    e-mail: [daniel@roelfs.net](mailto:daniel@roelfs.net)\n
+    ::::\n")
+    }
+```
+:::
+
+## Work experience {.section}
+
+```{r}
+#| label: work-experience
+
+yaml_to_df(yaml_file, "work_experience") |>
+    str_glue_data('
+    ### <<company>>
+
+    ::: {.cv-date}\n
+    <<date>>\n
+    :::
+
+    _<<position>>_
+
+    <<description>>', .open = "<<", .close = ">>")
+```
+
+## Education {.section}
+
+```{r}
+#| label: education
+
+yaml_to_df(yaml_file, "education") |>
+    str_glue_data('
+    ### <<institution>>
+
+    ::: {.cv-date}\n
+    <<date>>\n
+    :::
+
+    _<<title>>_
+
+    <<description>>', .open = "<<", .close =">>")
+```
+
+## Skills & Languages {.section}
+
+```{r}
+#| label: tech-skills
+
+yaml_to_df(yaml_file, "tech_skills") |>
+    str_glue_data('
+    ::: {.skill-container}\n
+    :::: {.skill-bar style="width: <<level>>%;"}\n
+    <<name>>\n
+    ::::\n
+    :::', .open = "<<", .close =">>")
+```
+
+::: {style="height: 0.5rem;"}
+:::
+
+```{r}
+#| label: language-skills
+
+yaml_to_df(yaml_file, "language_skills") |>
+    str_glue_data('
+    ::: {.skill-container}\n
+    :::: {.skill-bar style="width: <<level>>%;"}\n
+    <<name>> (<<cefr>>)\n
+    ::::\n
+    :::', .open = "<<", .close =">>")
+```
+
+## Awards {.section}
+
+```{r}
+#| label: awards
+
+yaml_to_df(yaml_file, "awards") |>
+    str_glue_data('
+    ### <<name>>
+
+    ::: {.cv-date}\n
+    <<year>>\n
+    :::
+
+    _<<organisation>>_
+
+    <<description>>', .open = "<<", .close =">>")
+```
+
+## Commissions {.section}
+
+```{r}
+#| label: commissions
+
+yaml_to_df(yaml_file, "commissions") |>
+    str_glue_data('
+    ### <<organisation>>
+
+    ::: {.cv-date}\n
+    <<date>>\n
+    :::
+
+    _<<position>>_
+
+    <<description>>', .open = "<<", .close =">>")
+```
+
+## Portfolio {.section}
+
+I occasionally write blogposts that serve as tutorials or showcases for how I solve certain data science problems
+
+```{r}
+#| label: portfolio
+
+yaml_to_df(yaml_file, "portfolio") |>
+    str_glue_data('
+    ### [{name}]({url})
+
+    {description}')
+```
+
+## Selected publications {.section}
+
+```{r}
+#| label: publications
+
+str_glue(yaml_file[["publications"]][["bibliography"]])
+```
+
+For an extended list of publications, see the [publications](https://danielroelfs.com/publications) list on my website, [ORCID](https://orcid.org/0000-0002-1083-002X) or my [Google Scholar](https://scholar.google.com/citations?hl=en&user=QmVQcsAAAAAJ&view_op=list_works&sortby=pubdate) profile.
