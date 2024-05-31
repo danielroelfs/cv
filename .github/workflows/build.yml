@@ -43,11 +43,12 @@ jobs:
         id: pages
         uses: actions/configure-pages@v3
 
-      - name: 🔨 Generate PDF
+      - name: 🏗️ Set up Chrome
         uses: browser-actions/setup-chrome@v1
         id: setup-chrome
         
-      - run: |
+      - name: 🔨 Generate PDF
+        run: |
           ${{ steps.setup-chrome.outputs.chrome-path }} --headless --virtual-time-budget=2000000 --print-to-pdf=roelfs_cv.pdf tmp.html
       
       - name: 📦 Upload artifact
