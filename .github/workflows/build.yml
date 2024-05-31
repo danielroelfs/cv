@@ -54,9 +54,7 @@ jobs:
         uses: actions/upload-pages-artifact@v1
         with:
           name: cv_files
-          path: |
-            index.html
-            roelfs_cv.pdf
+          path: index.html
 
   deploy:
     environment:
