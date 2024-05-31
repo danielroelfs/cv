@@ -40,7 +40,8 @@ jobs:
       - name: Create PDF
         uses: browser-actions/setup-chrome@v1
         id: setup-chrome
-        run: |
+        
+      - run: |
           ${{ steps.setup-chrome.outputs.chrome-path }} --headless --virtual-time-budget=2000000 --print-to-pdf=roelfs_cv.pdf tmp.html
       
       - name: Upload artifact
