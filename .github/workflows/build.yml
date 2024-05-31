@@ -6,8 +6,9 @@ on:
 name: Render and Publish
   
 permissions: 
-    contents: write
-    pages: write
+  id-token: write
+  contents: write
+  pages: write
 
 jobs:
   build:
