@@ -180,6 +180,8 @@ yaml_to_df(yaml_file, "clinical") |>
     _<<position>>_\n\n', .open = "<<", .close =">>")
 ```
 
+<br>
+
 ## Commissions {.section}
 
 ```{r}
