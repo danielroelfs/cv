@@ -2,6 +2,7 @@
 
 :root {
     --viewer-pages-spacing: 12px;
+    --viewer-background-color: #dcdcdc;
     --viewer-shadow-color: #313131;
 }
 
@@ -14,6 +15,10 @@ h2.section + section.level3 {
 }
 
 @media screen {
+
+    body {
+        background-color: var(--viewer-background-color) !important;
+    }
 
     .pagedjs_pages {
         max-width: var(--pagedjs-width);
