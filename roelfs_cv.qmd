@@ -1,5 +1,8 @@
 ---
 title: Daniel Roelfs
+author: Daniel Roelfs
+date: today
+pagetitle: Daniel Roelfs' CV
 format:
   html:
     include-in-header: 
