@@ -162,6 +162,22 @@ yaml_to_df(yaml_file, "awards") |>
     <<description>>', .open = "<<", .close =">>")
 ```
 
+## Clincial experience {.section}
+
+```{r}
+#| label: clinical
+
+yaml_to_df(yaml_file, "clinical") |>
+    str_glue_data('
+    ### <<name>>
+
+    ::: {.cv-date}\n
+    <<date>>\n
+    :::
+
+    _<<position>>_\n\n', .open = "<<", .close =">>")
+```
+
 ## Commissions {.section}
 
 ```{r}

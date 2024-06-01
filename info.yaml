@@ -144,6 +144,15 @@ awards:
     year: 2019
     description: |
       - Awarded to the best master theses in the field of neuroscience
+clinical:
+  kchl:
+    name: Clinical Chemical Hematological Lab - Gelre Apeldoorn
+    position: Phlebotomist
+    date: 2016
+  internship:
+    name: Various departments - Gelre Apeldoorn
+    position: Assistant nurse
+    date: 2016
 commissions:
   dnb:
     organisation: DNB Data Science Meetup
@@ -184,10 +193,10 @@ portfolio:
     url: danielroelfs.github.io/slides
     description: |
       - Slides and resources for public talks, workshops, and presentations I've given since 2019
-  advent_of_code:
-    name: Advent of Code
-    url: https://danielroelfs.github.io/advent-of-code/
-    description: ""
+  #advent_of_code:
+  #  name: Advent of Code
+  #  url: https://danielroelfs.github.io/advent-of-code/
+  #  description: ""
   intro_to_r:
     name: Introduction To Basic Statistics in R
     url: https://norment.github.io/IntroToBasicStatisticsInR/
