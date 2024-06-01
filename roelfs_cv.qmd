@@ -117,6 +117,8 @@ yaml_to_df(yaml_file, "education") |>
 
 ## Skills & Languages {.section}
 
+::: {.two-col-row}
+:::: {.two-col-column}
 ```{r}
 #| label: tech-skills
 
@@ -128,10 +130,8 @@ yaml_to_df(yaml_file, "tech_skills") |>
     ::::\n
     :::', .open = "<<", .close =">>")
 ```
-
-::: {style="height: 0.5rem;"}
-:::
-
+::::
+:::: {.two-col-column}
 ```{r}
 #| label: language-skills
 
@@ -143,6 +143,8 @@ yaml_to_df(yaml_file, "language_skills") |>
     ::::\n
     :::', .open = "<<", .close =">>")
 ```
+::::
+:::
 
 ## Awards {.section}
 
@@ -219,3 +221,7 @@ str_glue(yaml_file[["publications"]][["bibliography"]])
 ```
 
 For an extended list of publications, see the [publications](https://danielroelfs.com/publications) list on my website, [ORCID](https://orcid.org/0000-0002-1083-002X) or my [Google Scholar](https://scholar.google.com/citations?hl=en&user=QmVQcsAAAAAJ&view_op=list_works&sortby=pubdate) profile.
+
+::: {.last-updated}
+Last updated: `r format(Sys.Date(), "%e %B %Y")`
+:::

@@ -36,6 +36,7 @@ h1, h2, h3, h4, h5, h6 {
 
 h1, h2, h3 {
     font-variant-caps: all-small-caps;
+    opacity: 1;
 }
 
 h1 {
@@ -48,6 +49,10 @@ h1 {
     }
 }
 
+header#title-block-header {
+    margin-block-end: 0.5rem;
+}
+
 _::-webkit-full-page-media, _:future, :root h1.title {
     padding-left: 4.5rem; 
 }
@@ -56,15 +61,16 @@ _::-webkit-full-page-media, _:future, :root h1.title {
     font-size: 110%;
     letter-spacing: 1px;
     display: block;
-    margin-top: 3rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
     border-top: 2px solid $font-color;
     border-bottom: none;
 }
 
 h3 {
     font-size: 80%;
-    margin-top: 1rem !important;
-    margin-bottom: 0 !important;
+    margin-top: 0.5rem !important;
+    margin-bottom: 0rem !important;
     letter-spacing: 0.1px;
 }
 
@@ -122,10 +128,42 @@ ol li p, ul li p {
     margin-left: 1.5rem;
 }
 
-/* Misc */
+/* Skill bars */
+.two-col-row {
+    display: flex;
+}
+  
+.two-col-column {
+    flex: 50%;
+}
 
+.skill-container {
+    font-family: $header-font-family;
+    font-weight: $header-font-weight;
+    width: 70%;
+    height: 1.7rem !important;
+    padding: 1px;
+    margin: 0.15rem 0;
+    background: rgba(0, 0, 0, 0.1);
+    .two-col-column & {
+        width: 95%;
+    }
+    & > .skill-bar {
+        padding-left: 5px;
+        font-variant-caps: all-small-caps;
+        background-color: #555;
+        text-align: left;
+    }
+    .skill-bar {
+        color: white;
+        height: 1.6rem;
+        box-shadow: 0 0 0 0 none, inset 0 1px rgba(255, 255, 255, 0.1);
+    }
+}
+
+/* Misc */
 p {
-    margin-bottom: 0.1em !important;
+    margin-bottom: 0 !important;
 }
 
 .email {
@@ -156,29 +194,14 @@ p {
     margin-top: -1.5rem;
 }
 
-.skill-container {
-    font-family: $header-font-family;
-    font-weight: $header-font-weight;
-    width: 70%;
-    height: 1.7rem !important;
-    padding: 1px;
-    margin: 0.15rem 0;
-    background: rgba(0, 0, 0, 0.1);
-    & > .skill-bar {
-        padding-left: 5px;
-        font-variant-caps: all-small-caps;
-        background-color: #555;
-        text-align: left;
-    }
-    .skill-bar {
-        color: white;
-        height: 1.6rem;
-        box-shadow: 0 0 0 0 none, inset 0 1px rgba(255, 255, 255, 0.1);
-    }
-}
-
-.omission {
-    height: 0.2rem;
-    border-bottom: 1px dashed #808080;
-    margin-bottom: 0.8rem;
+.last-updated {
+    position: absolute;
+    font-family: 'Cooper Hewitt', sans-serif;
+    font-weight: 709;
+    font-size: 90%;
+    font-variant-caps: all-small-caps;
+    color: #555555;
+    letter-spacing: 0.1px;
+    bottom: 0;
+    right: 0;
 }
