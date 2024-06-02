@@ -13,7 +13,7 @@ body {
     min-height: 100%;
     margin-left: auto;
     margin-right: auto;
-    color: $font-color;
+    color: $font-color !important;
     padding: 0;
     -webkit-font-smoothing: subpixel-antialiased;
     -webkit-box-sizing: border-box;
@@ -31,7 +31,7 @@ body {
 h1, h2, h3, h4, h5, h6 {
     font-family: $header-font-family;
     font-weight: $header-font-weight !important;
-    opacity: 1;
+    opacity: 1 !important;
 }
 
 h1, h2, h3 {
@@ -98,7 +98,6 @@ a {
         }
     }
     & svg, &.no-hover {
-        color: $font-color !important;
         transition: 0.25s;
         &:hover {
             color: $link-color !important;
