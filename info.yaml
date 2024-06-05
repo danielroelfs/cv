@@ -1,7 +1,4 @@
 ---
-description: |
-  Data Scientist working on anti-money laundering for DNB, Norway's largest bank.
-  Previously a biomedical researcher in Computational Psychiatry with a focus on neuroimaging and genetics
 contact_info:
   website:
     name: danielroelfs.com
@@ -177,6 +174,7 @@ portfolio:
     description: |
       - Includes tutorials on statistics ([link](https://danielroelfs.com/blog/everything-is-a-linear-model/), [link](https://danielroelfs.com/blog/a-basic-comparison-between-factor-analysis-pca-and-ica/)) and data science ([link](https://danielroelfs.com/blog/analysing-the-nyt-best-sellers-list-using-an-api/), [link](https://danielroelfs.com/blog/visualizing-the-state-of-the-amsterdam-housing-market/), [link](https://danielroelfs.com/blog/the-easier-way-to-create-a-map-of-norway-using-csmaps/))
       - Tutorials contain code written in R and Python, website is generated using Hugo and Quarto hosted through GitHub and Netlify
+      - Featured on the front page of [HackerNews](https://news.ycombinator.com/item?id=39420111)
   apps:
     name: danielroelfs.app
     url: https://danielroelfs.app
