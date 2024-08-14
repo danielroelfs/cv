@@ -195,7 +195,7 @@ p {
 
 .last-updated {
     position: absolute;
-    font-family: 'Cooper Hewitt', sans-serif;
+    font-family: $header-font-family;
     font-weight: 709;
     font-size: 90%;
     font-variant-caps: all-small-caps;
