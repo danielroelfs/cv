@@ -1,24 +1,24 @@
 /*-- scss:defaults --*/
 
-:root{
-    --pagedjs-margin-top: 1.2in;
-    --pagedjs-margin-bottom: 1in;
-    --pagedjs-margin-right: 1.3in;
-    --pagedjs-margin-left: 1.3in;
-    --root-font-size: 12pt;
+:root {
+  --pagedjs-margin-top: 1.2in;
+  --pagedjs-margin-bottom: 1in;
+  --pagedjs-margin-right: 1.3in;
+  --pagedjs-margin-left: 1.3in;
+  --root-font-size: 12pt;
 }
 
 @page {
-    size: A4 portrait;
-    font-size: var(--root-font-size);
+  size: A4 portrait;
+  font-size: var(--root-font-size);
 
-    @bottom-center{
-        content: counter(page) ' of ' counter(pages);
-        font-family: 'Cooper Hewitt', sans-serif;
-        font-weight: 709;
-        font-size: 90%;
-        font-variant-caps: all-small-caps;
-        color: #555;
-        letter-spacing: 0em;
-    }   
+  @bottom-center {
+    content: counter(page) " of " counter(pages);
+    font-family: "Cooper Hewitt", sans-serif;
+    font-weight: 709;
+    font-size: 90%;
+    font-variant-caps: all-small-caps;
+    color: #555;
+    letter-spacing: 0em;
+  }
 }

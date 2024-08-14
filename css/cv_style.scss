@@ -1,7 +1,7 @@
 /*-- scss:defaults --*/
 
-$body-font-family: 'source-serif-4', serif;
-$header-font-family: 'Cooper Hewitt', sans-serif;
+$body-font-family: "source-serif-4", serif;
+$header-font-family: "Cooper Hewitt", sans-serif;
 $font-color: #444444;
 $header-font-weight: 711;
 $link-color: rgba(85, 85, 85, 0.8);
@@ -28,13 +28,20 @@ body {
 }
 
 /* Headers */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: $header-font-family;
     font-weight: $header-font-weight !important;
     opacity: 1 !important;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     font-variant-caps: all-small-caps;
     opacity: 1;
 }
@@ -53,8 +60,10 @@ header#title-block-header {
     margin-block-end: 0.5rem;
 }
 
-_::-webkit-full-page-media, _:future, :root h1.title {
-    padding-left: 4.5rem; 
+_::-webkit-full-page-media,
+_:future,
+:root h1.title {
+    padding-left: 4.5rem;
 }
 
 .section h2 {
@@ -74,7 +83,9 @@ h3 {
     letter-spacing: 0.1px;
 }
 
-h4, h5, h6 {
+h4,
+h5,
+h6 {
     font-size: 80%;
 }
 
@@ -97,7 +108,8 @@ a {
             opacity: 100%;
         }
     }
-    & svg, &.no-hover {
+    & svg,
+    &.no-hover {
         transition: 0.25s;
         &:hover {
             color: $link-color !important;
@@ -110,7 +122,8 @@ a {
 }
 
 /* List styling */
-ul, ol {
+ul,
+ol {
     padding-left: 1.1rem !important;
     font-size: 80%;
     & li {
@@ -123,7 +136,8 @@ ul li:before {
     margin-right: 0;
 }
 
-ol li p, ul li p {
+ol li p,
+ul li p {
     margin-left: 1.5rem;
 }
 
@@ -131,7 +145,7 @@ ol li p, ul li p {
 .two-col-row {
     display: flex;
 }
-  
+
 .two-col-column {
     flex: 50%;
 }
@@ -156,7 +170,9 @@ ol li p, ul li p {
     .skill-bar {
         color: white;
         height: 1.6rem;
-        box-shadow: 0 0 0 0 none, inset 0 1px rgba(255, 255, 255, 0.1);
+        box-shadow:
+            0 0 0 0 none,
+            inset 0 1px rgba(255, 255, 255, 0.1);
     }
 }
 
@@ -188,7 +204,7 @@ p {
     font-family: $header-font-family;
     font-weight: $header-font-weight;
     font-size: 80%;
-    position: absolute; 
+    position: absolute;
     right: 0;
     margin-top: -1.5rem;
 }
