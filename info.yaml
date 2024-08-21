@@ -183,12 +183,12 @@ portfolio:
       - Apps created in Flask and Shiny
   bilkollektivet_app:
     name: Bilkollektivet Trip Cost Calculator
-    url: http://bilkollektivet.danielroelfs.app
+    url: https://bilkollektivet.danielroelfs.app
     description: |
       - Shiny app to estimate the cost of a car rental through Bilkollektivet
   talks:
     name: Presentations & Talks
-    url: danielroelfs.github.io/slides
+    url: https://danielroelfs.github.io/slides
     description: |
       - Slides and resources for public talks, workshops, and presentations I've given since 2019
   #advent_of_code:
