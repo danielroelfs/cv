@@ -149,6 +149,10 @@ yaml_to_df(yaml_file, "language_skills") |>
 ::::
 :::
 
+::: {style="margin-top: 1em;font-size: 90%"}
+In addition, I'm familiar with common data science and data engineering frameworks including but not limited to Shiny, Flask, Streamlit, MLFlow, Jenkins, AWS, Docker, LangChain, dbt, and various other common tools.
+:::
+
 ## Awards {.section}
 
 ```{r}
