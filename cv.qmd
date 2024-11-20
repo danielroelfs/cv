@@ -1,6 +1,6 @@
 ---
-title: Daniel Roelfs
-author: Daniel Roelfs
+title: Daniel Roelfs, PhD
+author: Daniel Roelfs, PhD
 date: today
 pagetitle: Daniel Roelfs' CV
 format:
@@ -12,8 +12,7 @@ format:
             <script src="https://unpkg.com/pagedjs/dist/paged.polyfill.js"></script>
             <link rel="stylesheet" type="text/css" href="css/print.css">
             <link rel="stylesheet" type="text/css" href="css/pagedjs.css" media="screen">
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/js/all.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
     embed-resources: true
 params:
     pdf_mode: false
@@ -65,12 +64,13 @@ show_email <- FALSE
 
 yaml_to_df(yaml_file, "contact_info") %>%
     {if(show_email) dplyr::filter(., str_detect(.$item, "email|e-mail", negate = TRUE)) else .} |>
-    str_glue_data("<a class='no-hover' href='{url}'><i class='{icon}'></i></a> ")
+    #str_glue_data("<a class='no-hover' href='{url}'><i class='{icon}'></i></a>")
+    str_glue_data("<a class='no-hover' href='{url}'><i class='ti ti-{icon}'></i></a>")
 
 if (params$pdf_mode) {
-    cat(" <span class='no-hover'>|</span> <a class='no-hover' href='https://cv.danielroelfs.com'><i class='fa-brands fa-safari'></i></a>")
+    cat(" <span class='no-hover'>|</span> <a class='no-hover' href='https://cv.danielroelfs.com'><i class='ti ti-brand-safari'></i></a>")
 } else {
-    cat(" <span class='no-hover'>|</span> <a class='no-hover' href='roelfs_cv.pdf'><i class='fa-solid fa-download'></i></a>")
+    cat(" <span class='no-hover'>|</span> <a class='no-hover' href='roelfs_cv.pdf'><i class='ti ti-download'></i></a>")
 }
 
 if (show_email) {

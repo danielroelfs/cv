@@ -3,31 +3,31 @@ contact_info:
   website:
     name: danielroelfs.com
     url: https://danielroelfs.com
-    icon: fa-solid fa-globe
+    icon: world-www
   apps:
     name: danielroelfs.app
     url: https://danielroelfs.app
-    icon: fa-solid fa-desktop
+    icon: apps
   e-mail:
     name: daniel@roelfs.net
     url: mailto:daniel@roelfs.net
-    icon: fa-solid fa-at
+    icon: mail
   linkedin:
     name: danielroelfs
     url: https://www.linkedin.com/in/danielroelfs/
-    icon: fa-brands fa-linkedin
+    icon: brand-linkedin
   github:
     name: danielroelfs
     url: https://github.com/danielroelfs/
-    icon: fa-brands fa-github
+    icon: brand-github
   bluesky:
     name: https://bsky.app/profile/danielroelfs.bsky.social
     url: https://bsky.app/profile/danielroelfs.bsky.social
-    icon: fa-brands fa-bluesky
+    icon: brand-bluesky
   orcid:
     name: 0000-0002-1083-002X
     url: https://orcid.org/0000-0002-1083-002X
-    icon: fa-brands fa-orcid
+    icon: brand-pushbullet
 work_experience:
   dnb:
     company: DNB - Group Security - Group AML
