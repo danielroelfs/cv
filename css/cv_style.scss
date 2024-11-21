@@ -50,7 +50,8 @@ h1 {
     font-size: 2rem;
     &.title {
         display: block;
-        font-size: 4rem;
+        font-size: 3rem;
+        font-variant-caps: normal;
         text-align: -webkit-center;
         margin-top: -1rem !important;
     }
@@ -98,6 +99,7 @@ a {
     h3 & {
         opacity: 80%;
         color: $font-color !important;
+        font-weight: $header-font-weight;
         &:hover {
             opacity: 100%;
         }
