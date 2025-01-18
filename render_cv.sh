@@ -8,7 +8,6 @@ quarto render cv.qmd -P pdf_mode:true -o tmp.html
     --headless \
     --virtual-time-budget=20000000 \
     --print-to-pdf=cv.pdf \
-    --no-sandbox \
     tmp.html
 
 rm tmp.html
