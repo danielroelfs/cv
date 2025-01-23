@@ -172,7 +172,7 @@ portfolio:
     name: danielroelfs.com
     url: https://danielroelfs.com
     description: |
-      - Includes tutorials on statistics ([link](https://danielroelfs.com/blog/everything-is-a-linear-model/), [link](https://danielroelfs.com/blog/a-basic-comparison-between-factor-analysis-pca-and-ica/)) and data science ([link](https://danielroelfs.com/blog/querying-databases-using-langchain-and-ollama/), [link](https://danielroelfs.com/blog/visualizing-the-state-of-the-amsterdam-housing-market/), [link](https://danielroelfs.com/blog/the-easier-way-to-create-a-map-of-norway-using-csmaps/))
+      - Includes tutorials on statistics ([link](https://danielroelfs.com/blog/everything-is-a-linear-model/), [link](https://danielroelfs.com/blog/a-basic-comparison-between-factor-analysis-pca-and-ica/)) and data science ([link](https://danielroelfs.com/blog/querying-databases-using-langchain-and-ollama/), [link](https://danielroelfs.com/blog/energy-production-and-changing-weather-in-denmark/)), [link](https://danielroelfs.com/blog/visualizing-the-state-of-the-amsterdam-housing-market/)
       - Tutorials contain code written in R and Python, website is generated using Hugo and Quarto hosted through GitHub and Netlify
       - Featured on the front page of [HackerNews](https://news.ycombinator.com/item?id=39420111)
   apps:
