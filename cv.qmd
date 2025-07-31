@@ -118,23 +118,16 @@ yaml_to_df(yaml_file, "education") |>
     <<description>>', .open = "<<", .close =">>")
 ```
 
-## Skills & Languages {.section}
+## Skills {.section}
 
-::: {.two-col-row}
-:::: {.two-col-column}
-```{r}
-#| label: tech-skills
+Daily use of Python, R, SQL (various dialects), bash, AWS, Snowflake, Git, and common packages and module. Experience also with MATLAB, LaTeX, HTML/CSS. Have previously worked with Google Cloud, SLURM.
 
-yaml_to_df(yaml_file, "tech_skills") |>
-    str_glue_data('
-    ::: {.skill-container}\n
-    :::: {.skill-bar style="width: <<level>>%;"}\n
-    <<name>>\n
-    ::::\n
-    :::', .open = "<<", .close =">>")
-```
-::::
-:::: {.two-col-column}
+::: {style="margin-top: 1em;font-size: 90%"}
+In addition, I'm familiar with common data science and data engineering frameworks including but not limited to Shiny, Flask, Streamlit, MLFlow, Jenkins, Docker, Airflow, TensorFlow, LangChain, dbt, and various other common tools.
+:::
+
+## Languages {.section}
+
 ```{r}
 #| label: language-skills
 
@@ -146,12 +139,6 @@ yaml_to_df(yaml_file, "language_skills") |>
     ::::\n
     :::', .open = "<<", .close =">>")
 ```
-::::
-:::
-
-::: {style="margin-top: 1em;font-size: 90%"}
-In addition, I'm familiar with common data science and data engineering frameworks including but not limited to Shiny, Flask, Streamlit, MLFlow, Jenkins, AWS, Docker, LangChain, dbt, and various other common tools.
-:::
 
 ## Awards {.section}
 
