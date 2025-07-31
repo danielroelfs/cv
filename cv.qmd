@@ -13,6 +13,7 @@ format:
             <link rel="stylesheet" type="text/css" href="css/print.css">
             <link rel="stylesheet" type="text/css" href="css/pagedjs.css" media="screen">
             <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.7/js/bootstrap.esm.min.js" integrity="sha512-0KgoqSj0HjRqpUysBrkciqVLvuycDwnPfuJukHZsUtCY7AURCus+rn8AX4sed7ErcSIReuKkPEFvoGr/qnY+ug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     embed-resources: true
 params:
     pdf_mode: false
