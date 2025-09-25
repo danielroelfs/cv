@@ -1,8 +1,8 @@
 #!/bin/bash
 
-quarto render cv.qmd -P pdf_mode:false -o index.html
+quarto render cv.qmd -P pdf_mode:false --metadata format.html.embed-resources=false -o index.html
 
-quarto render cv.qmd -P pdf_mode:true -o tmp.html
+quarto render cv.qmd -P pdf_mode:true --metadata format.html.embed-resources=true -o tmp.html
     
 /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome \
     --headless \
