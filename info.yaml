@@ -21,8 +21,8 @@ contact_info:
     url: https://github.com/danielroelfs/
     icon: brand-github
   bluesky:
-    name: https://bsky.app/profile/danielroelfs.bsky.social
-    url: https://bsky.app/profile/danielroelfs.bsky.social
+    name: danielroelfs.com
+    url: https://bsky.app/profile/danielroelfs.com
     icon: brand-bluesky
   orcid:
     name: 0000-0002-1083-002X
