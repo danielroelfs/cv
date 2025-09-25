@@ -6,7 +6,7 @@ quarto render cv.qmd -P pdf_mode:true -o tmp.html
     
 /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome \
     --headless \
-    --virtual-time-budget=600000000 \
+    --virtual-time-budget=100000000 \
     --print-to-pdf=cv.pdf \
     tmp.html
 
