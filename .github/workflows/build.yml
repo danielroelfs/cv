@@ -45,7 +45,8 @@ jobs:
         
       - name: 🔨 Generate PDF
         run: |
-          ${{ steps.setup-chrome.outputs.chrome-path }} --headless --virtual-time-budget=100000000 --allow-file-access-from-files --print-to-pdf=roelfs_cv.pdf tmp.html
+          ${{ steps.setup-chrome.outputs.chrome-path }} --version
+          ${{ steps.setup-chrome.outputs.chrome-path }} --headless --virtual-time-budget=200000000 --allow-file-access-from-files --print-to-pdf=roelfs_cv.pdf tmp.html
       
       - name: 📦 Upload artifact
         uses: actions/upload-pages-artifact@v4
