@@ -40,32 +40,12 @@ jobs:
         shell: bash
 
       - name: 🏗️ Set up Chrome
-        uses: browser-actions/setup-chrome@v1
+        uses: browser-actions/setup-chrome@v2
         id: setup-chrome
-        with:
-          chrome-version: stable
         
-      - name: Install Python HTTP server
-        run: sudo apt-get install -y python3
-
-      - name: Start server and generate PDF
+      - name: 🔨 Generate PDF
         run: |
-          ls -a
-          python3 -m http.server 8000 &
-          SERVER_PID=$!
-          sleep 2
-
-          chrome \
-            --headless=new \
-            --no-sandbox \
-            --disable-dev-shm-usage \
-            --disable-gpu \
-            --virtual-time-budget=100000000 \
-            --allow-file-access-from-files \
-            --print-to-pdf=roelfs_cv.pdf \
-            http://localhost:8000/tmp.html
-
-          kill $SERVER_PID
+          ${{ steps.setup-chrome.outputs.chrome-path }} --headless --virtual-time-budget=200000000 --allow-file-access-from-files --print-to-pdf=roelfs_cv.pdf tmp.html
       
       - name: 📦 Upload artifact
         uses: actions/upload-pages-artifact@v4

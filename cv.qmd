@@ -67,18 +67,11 @@ yaml_to_df(yaml_file, "contact_info") %>%
     #str_glue_data("<a class='no-hover' href='{url}'><i class='{icon}'></i></a>")
     str_glue_data("<a class='no-hover' href='{url}'><i class='ti ti-{icon}'></i></a>")
 
-if (params$pdf_mode) {
-    cat(" <span class='no-hover'>|</span> <a class='no-hover' href='https://cv.danielroelfs.com'><i class='ti ti-brand-safari'></i></a>")
-} else {
-    cat(" <span class='no-hover'>|</span> <a class='no-hover' href='roelfs_cv.pdf'><i class='ti ti-download'></i></a>")
-}
-
-if (show_email) {
-    cat("\n
-    :::: {.email}\n
-    e-mail: [daniel@roelfs.net](mailto:daniel@roelfs.net)\n
-    ::::\n")
-    }
+#if (params$pdf_mode) {
+#    cat(" <span class='no-hover'>|</span> <a class='no-hover' href='https://cv.danielroelfs.com'><i class='ti ti-brand-safari'></i></a>")
+#} else {
+#    cat(" <span class='no-hover'>|</span> <a class='no-hover' href='roelfs_cv.pdf'><i class='ti ti-download'></i></a>")
+#}
 ```
 :::
 
