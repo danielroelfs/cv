@@ -45,6 +45,7 @@ jobs:
         
       - name: 🔨 Generate PDF
         run: |
+          rm -rf ~/.config/google-chrome/
           ${{ steps.setup-chrome.outputs.chrome-path }} --version
           ${{ steps.setup-chrome.outputs.chrome-path }} --headless --virtual-time-budget=200000000 --allow-file-access-from-files --print-to-pdf=roelfs_cv.pdf tmp.html
       
