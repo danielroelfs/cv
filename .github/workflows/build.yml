@@ -45,12 +45,26 @@ jobs:
         with:
           chrome-version: stable
         
-      - name: 🔨 Generate PDF
+      - name: Install Python HTTP server
+        run: sudo apt-get install -y python3
+
+      - name: Start server and generate PDF
         run: |
-          ${{ steps.setup-chrome.outputs.chrome-path }} --version
-          ${{ steps.setup-chrome.outputs.chrome-path }} --headless=new --virtual-time-budget=200000000 --disable-dev-shm-usage \
-            --disable-gpu --allow-file-access-from-files \
-            --print-to-pdf=roelfs_cv.pdf tmp.html
+          python3 -m http.server 8000 &
+          SERVER_PID=$!
+          sleep 2
+
+          chrome \
+            --headless=new \
+            --no-sandbox \
+            --disable-dev-shm-usage \
+            --disable-gpu \
+            --virtual-time-budget=100000000 \
+            --allow-file-access-from-files \
+            --print-to-pdf=roelfs_cv.pdf \
+            http://localhost:8000/tmp.html
+
+          kill $SERVER_PID
       
       - name: 📦 Upload artifact
         uses: actions/upload-pages-artifact@v4
