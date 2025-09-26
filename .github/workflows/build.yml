@@ -42,12 +42,15 @@ jobs:
       - name: 🏗️ Set up Chrome
         uses: browser-actions/setup-chrome@v2
         id: setup-chrome
+        with:
+          chrome-version: stable
         
       - name: 🔨 Generate PDF
         run: |
-          rm -rf ~/.config/google-chrome/
           ${{ steps.setup-chrome.outputs.chrome-path }} --version
-          ${{ steps.setup-chrome.outputs.chrome-path }} --headless --virtual-time-budget=200000000 --allow-file-access-from-files --print-to-pdf=roelfs_cv.pdf tmp.html
+          ${{ steps.setup-chrome.outputs.chrome-path }} --headless --virtual-time-budget=200000000 --no-sandbox \
+            --disable-dev-shm-usage --remote-debugging-port=9222 --allow-file-access-from-files \
+            --print-to-pdf=roelfs_cv.pdf tmp.html
       
       - name: 📦 Upload artifact
         uses: actions/upload-pages-artifact@v4
