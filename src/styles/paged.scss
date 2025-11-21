@@ -1,0 +1,39 @@
+@use "variables" as v;
+
+@page {
+  size: A4;
+  margin: 2.5cm 3.25cm;
+  @bottom-center {
+    content: counter(page) " of " counter(pages);
+    font-family: v.$header-family;
+    font-weight: 709;
+    font-size: 0.8rem;
+    color: #555555;
+    text-transform: uppercase;
+  }
+}
+
+.new-page {
+  break-before: page;
+}
+
+.entry {
+  page-break-inside: avoid;
+}
+
+@media screen {
+  body {
+    background-color: #dcdcdc;
+  }
+
+  .pagedjs_pages {
+    max-width: var(--pagedjs-width);
+    margin: 0 auto;
+  }
+
+  .pagedjs_page {
+    background-color: #fdfdfd;
+    box-shadow: 0 0 7px 1px #313131;
+    margin: 1rem auto;
+  }
+}

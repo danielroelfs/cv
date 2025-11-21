@@ -1,0 +1,44 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [dev]
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 🧳 Checkout repository
+        uses: actions/checkout@v4
+
+      - name: 🔨 Install, build, and upload site output
+        uses: withastro/action@v2
+
+      - name: 🏗️ Set up Chrome
+        uses: browser-actions/setup-chrome@v2
+        id: setup-chrome
+
+      - name: 🔨 Generate PDF
+        run: |
+          ${{ steps.setup-chrome.outputs.chrome-path }} --headless --no-pdf-header-footer --print-to-pdf=dist/roelfs_cv.pdf dist/index.html
+
+      - name: 📦 Upload artifact
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: dist
+
+  #deploy:
+  #  needs: build
+  #  runs-on: ubuntu-latest
+  #  environment:
+  #    name: github-pages
+  #    url: ${{ steps.deployment.outputs.page_url }}
+  #  steps:
+  #    - name: Deploy to GitHub Pages
+  #      id: deployment
+  #      uses: actions/deploy-pages@v4

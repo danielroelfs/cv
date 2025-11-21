@@ -1,0 +1,23 @@
+---
+import "../styles/main.scss";
+import "../styles/paged.scss";
+---
+
+<html lang="no">
+  <head>
+    <meta charset="utf-8" />
+    <title>CV</title>
+
+    <script src="https://unpkg.com/pagedjs/dist/paged.polyfill.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css"
+    />
+  </head>
+
+  <body class="paged-cv">
+    <main id="content">
+      <slot />
+    </main>
+  </body>
+</html>

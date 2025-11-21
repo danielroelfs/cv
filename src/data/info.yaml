@@ -59,21 +59,21 @@ work_experience:
 education:
   phd:
     institution: University of Oslo - Faculty of Clinical Medicine
-    title: PhD, Doctoral Education
+    degree: PhD, Doctoral Education
     date: 2019 - 22
     description: |
       - Doctoral education at the Institute of Clinical Medicine at the University of Oslo
       - Courses relevant to neurobiology, advanced statistics, and other academic and non-academic skills
   master:
     institution: Lund University - Faculty of Medicine
-    title: MSc, Biomedicine
+    degree: MSc, Biomedicine
     date: 2016 - 18
     description: |
       - Master's program in Biomedicine at the Faculty of Medicine
       - Focus on molecular biology and neuroscience
   bachelor:
     institution: Utrecht University - University College Roosevelt
-    title: BSc, pre-medical track
+    degree: BSc, pre-medical track
     date: 2012 - 15
     description: |
       - Major in the pre-medical science track, minor in philosophy

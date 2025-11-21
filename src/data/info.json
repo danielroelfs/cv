@@ -1,0 +1,280 @@
+{
+    "name": "Daniel Roelfs, PhD",
+    "contact": {
+        "title": "Personal and Contact Information",
+        "entries": [
+            {
+                "name": "website",
+                "label": "danielroelfs.com",
+                "url": "https://danielroelfs.com",
+                "icon": "world-www"
+            },
+            {
+                "name": "apps",
+                "label": "danielroelfs.app",
+                "url": "https://danielroelfs.app",
+                "icon": "apps"
+            },
+            {
+                "name": "e-mail",
+                "label": "daniel@roelfs.net",
+                "url": "mailto:daniel@roelfs.net",
+                "icon": "mail"
+            },
+            {
+                "name": "linkedin",
+                "label": "danielroelfs",
+                "url": "https://www.linkedin.com/in/danielroelfs/",
+                "icon": "brand-linkedin"
+            },
+            {
+                "name": "github",
+                "label": "danielroelfs",
+                "url": "https://github.com/danielroelfs/",
+                "icon": "brand-github"
+            },
+            {
+                "name": "orcid",
+                "label": "0000-0002-1083-002X",
+                "url": "https://orcid.org/0000-0002-1083-002X",
+                "icon": "brand-pushbullet"
+            }
+        ]
+    },
+    "work_experience": {
+        "title": "Work Experience",
+        "entries": [
+            {
+                "role": "Data Scientist",
+                "company": "DNB - Group Security - Group AML",
+                "start": "aug 2022",
+                "end": "current",
+                "details": [
+                    "Data scientist in the Anti-Money Laundering Group at DNB",
+                    "Creating machine learning models using Python, R, and AWS cloud services and putting models in production"
+                ]
+            },
+            {
+                "role": "Doctoral Research Fellow",
+                "company": "University of Oslo - NORMENT - Multimodal Imaging Group",
+                "start": "mar 2019",
+                "end": "jul '22",
+                "details": [
+                    "PhD position on neuroimaging and genetics",
+                    "Running a study from conception through writing the final manuscript, analysis in R, Python, MATLAB, and a variety of additional tools"
+                ]
+            },
+            {
+                "role": "Research Assistant",
+                "company": "University of Oslo - NORMENT - EEG Group",
+                "start": "jun 2018",
+                "end": "feb '19",
+                "details": [
+                    "Managing EEG data, data preprocessing and analysis, training new EEG testers, performing EEG experiments"
+                ]
+            },
+            {
+                "role": "Research Assistant",
+                "company": "Rikshospitalet - Department of Medical Physics",
+                "start": "jun 2018",
+                "end": "feb '19",
+                "details": [
+                    "Data collection, management, and processing in an MRI study on sleep deprivation",
+                    "Processing and analyzing of data from the video camera"
+                ]
+            }
+        ]
+    },
+    "education": {
+        "title": "Education",
+        "entries": [
+            {
+                "degree": "PhD, Doctoral Education",
+                "institution": "University of Oslo - Faculty of Clinical Medicine",
+                "start": "mar 2019",
+                "end": "jul '22",
+                "details": [
+                    "Doctoral education at the Institute of Clinical Medicine at the University of Oslo",
+                    "Courses relevant to neurobiology, advanced statistics, and other academic and non-academic skills"
+                ]
+            },
+            {
+                "degree": "MSc, Biomedicine",
+                "institution": "Lund University - Faculty of Medicine",
+                "start": "sep 2016",
+                "end": "may '18",
+                "details": [
+                    "Master's program in Biomedicine at the Faculty of Medicine",
+                    "Focus on molecular biology and neuroscience"
+                ]
+            },
+            {
+                "degree": "BSc, pre-medical track",
+                "institution": "Utrecht University - University College Roosevelt",
+                "start": "aug 2012",
+                "end": "may '15",
+                "details": [
+                    "Major in the pre-medical science track, minor in philosophy",
+                    "Liberal Arts & Science program",
+                    "Honors College"
+                ]
+            }
+        ]
+    },
+    "technical_skills": {
+        "title": "Technical Skills",
+        "description": [
+            "Daily use of Python, R, SQL (various dialects), bash, AWS, Snowflake, Git, and common packages and module. Experience also with MATLAB, LaTeX, HTML/CSS. Have also previously worked with Google Cloud and SLURM.",
+            "In addition, I'm familiar with common data science and data engineering frameworks including but not limited to Shiny, Flask, Streamlit, MLFlow, Jenkins, Docker, Airflow, TensorFlow, LangChain, dbt, and various other common tools."
+        ]
+    },
+    "language_skills": {
+        "title": "Language Skills",
+        "entries": [
+            {
+                "name": "Norwegian",
+                "cefr": "C2",
+                "level": 100
+            },
+            {
+                "name": "English",
+                "cefr": "C2",
+                "level": 100
+            },
+            {
+                "name": "Dutch",
+                "cefr": "C2",
+                "level": 100
+            },
+            {
+                "name": "French",
+                "cefr": "B2",
+                "level": 55
+            },
+            {
+                "name": "German",
+                "cefr": "A2",
+                "level": 45
+            }
+        ]
+    },
+    "awards": {
+        "title": "Awards",
+        "entries": [
+            {
+                "title": "ECIP Oral Finalist",
+                "organisation": "World Congress of Psychiatry Genetics",
+                "date": 2021,
+                "details": [
+                    "Awarded to promising oral presentations from early-career researchers"
+                ]
+            },
+            {
+                "title": "International Training Grant",
+                "organisation": "Norwegian Research School in Neuroscience",
+                "date": 2019,
+                "details": [
+                    "Grant awarded to scientists to receive training abroad that'll benefit their research in Norway"
+                ]
+            },
+            {
+                "title": "Sparbanken Skåne Master Prize",
+                "organisation": "Sparbanksstiftelsen Färs & Frosta, Lund University",
+                "date": 2019,
+                "details": [
+                    "Awarded to the best master theses in the field of neuroscience"
+                ]
+            }
+        ]
+    },
+    "clinical_experience": {
+        "title": "Clinical Experience",
+        "description": [
+            "Between my BSc and my MSc I worked for a year in various positions at the University Medical Centre Utrecht and the Gelre Hospital in Apeldoorn to obtain additional practical clinical and research experience."
+        ]
+    },
+    "commissions": {
+        "title": "Commissions",
+        "entries": [
+            {
+                "organisation": "DNB Data Science Meetup",
+                "start": "aug 2023",
+                "end": "dec '24",
+                "position": "Committee Member"
+            },
+            {
+                "organisation": "NRSN Annual Conference",
+                "start": "sep 2019",
+                "end": "sep '21",
+                "position": "Committee Member",
+                "details": [
+                    "Organization of the national conference of the Norwegian Research School for Neuroscience its members"
+                ]
+            },
+            {
+                "organisation": "The Netherlands Red Cross Student Desk Zeeland",
+                "start": "jan 2014",
+                "end": "may '15",
+                "position": "General Board Member (Fundraising portfolio)"
+            }
+        ]
+    },
+    "portfolio": {
+        "title": "Portfolio",
+        "comment": "I occasionally write blogposts that serve as tutorials or showcases for how I solve certain data science problems. The headers in this section link to the relevant webpages.",
+        "entries": [
+            {
+                "title": "danielroelfs.com",
+                "url": "https://danielroelfs.com",
+                "details": [
+                    "Includes tutorials on statistics and data science",
+                    "Tutorials contain code written in R and Python, website generated using Hugo and Quarto",
+                    "Featured on the front page of HackerNews"
+                ]
+            },
+            {
+                "title": "danielroelfs.app",
+                "url": "https://danielroelfs.app",
+                "details": [
+                    "Collection of apps for various uses, self-hosted from a Raspberry Pi",
+                    "Apps created in Flask and Shiny"
+                ]
+            },
+            {
+                "title": "Bilkollektivet Trip Cost Calculator",
+                "url": "https://bilkollektivet.danielroelfs.app",
+                "details": [
+                    "Shiny app to estimate the cost of a car rental through Bilkollektivet"
+                ]
+            },
+            {
+                "title": "Presentations & Talks",
+                "url": "https://danielroelfs.github.io/slides",
+                "details": [
+                    "Slides and resources for public talks, workshops, and presentations since 2019"
+                ]
+            },
+            {
+                "title": "Introduction To Basic Statistics in R",
+                "url": "https://norment.github.io/IntroToBasicStatisticsInR/",
+                "details": [
+                    "Online book to help medical researchers get started in R"
+                ]
+            }
+        ]
+    },
+    "publications": {
+        "title": "Publications",
+        "comment": "For an extended list of publications, see the <a href='https://danielroelfs.com/publications'>publications</a> list on my website, <a href='https://orcid.org/0000-0002-1083-002X'>ORCID</a> or my <a href='https://scholar.google.com/citations?hl=en&amp;user=QmVQcsAAAAAJ&amp;view_op=list_works&amp;sortby=pubdate'>Google Scholar</a> profile.",
+        "entries": [
+            {
+                "references": [
+                    "<b>D Roelfs</b>, &hellip;, T Kaufmann <a href='https://doi.org/10.1038/s44220-023-00190-1'><b><em>Genetic overlap between multivariate measures of human functional brain connectivity and psychiatric disorders</em></b></a>. <em>Nature Mental Health</em>. doi: <a href='https://doi.org/10.1038/s44220-023-00190-1'>10.1038/s44220-023-00190-1</a> preprint: <a href='https://doi.org/10.1101/2021.06.15.21258954'>10.1101/2021.06.15.21258954</a>",
+                    "<b>D Roelfs</b>, &hellip;, T Kaufmann <a href='https://doi.org/10.1186/s12888-023-04905-7'><b><em>Shared genetic architecture between mental health and the brain functional connectome in the UK Biobank</em></b></a>. <em>BMC Psychiatry</em>. doi: <a href='https://doi.org/10.1186/s12888-023-04905-7'>10.1186/s12888-023-04905-7</a> preprint: <a href='https://doi.org/10.1101/2022.06.24.22276846'>10.1101/2022.06.24.22276846</a>",
+                    "<b>D Roelfs</b>, &hellip;, T Kaufmann <a href='https://doi.org/10.1038/s41398-021-01313-x'><b><em>Phenotypically independent profiles relevant to mental health are genetically correlated</em></b></a>. <em>Translational Psychiatry</em>. doi: <a href='https://doi.org/10.1038/s41398-021-01313-x'>10.1038/s41398-021-01313-x</a> preprint: <a href='https://doi.org/10.1101/2020.03.30.20045591'>10.1101/2020.03.30.20045591</a>",
+                    "I Voldsbekk, &hellip;, <b>D Roelfs</b>, &hellip;, II Maximov <a href='https://doi.org/10.1016/j.neuroimage.2020.117540'><b><em>Sleep and sleep deprivation differentially alter white matter microstructure: A mixed model design utilising advanced diffusion modelling</em></b></a>. <em>NeuroImage</em>. doi: <a href='https://doi.org/10.1016/j.neuroimage.2020.117540'>j.neuroimage.2020.117540</a> preprint: <a href='https://doi.org/10.1101/2020.08.24.259432'>10.1101/ 2020.08.24.259432</a>"
+                ]
+            }
+        ]
+    }
+}

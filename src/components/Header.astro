@@ -1,0 +1,26 @@
+---
+const { name, section_title, entries } = Astro.props;
+---
+
+<header class="cv-header">
+  <h1 class="name">{name}</h1>
+  <div class="download">
+    <a href="roelfs_cv.pdf"
+      ><i class="ti ti-download"></i>Download a PDF of this CV</a
+    >
+  </div>
+  <h2 class="section-header">{section_title}</h2>
+  <div class="contact-info">
+    {
+      entries.map((item: any) => {
+        const Wrapper = item.url ? "a" : "span";
+        return (
+          <Wrapper href={item.url} class="contact-item">
+            <i class={`ti ti-${item.icon}`} />
+            {item.label}
+          </Wrapper>
+        );
+      })
+    }
+  </div>
+</header>
