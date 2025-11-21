@@ -25,7 +25,7 @@ jobs:
 
       - name: 🔨 Generate PDF
         run: |
-          ${{ steps.setup-chrome.outputs.chrome-path }} --headless --no-sandbox --no-pdf-header-footer --print-to-pdf=dist/roelfs_cv.pdf dist/index.html
+          ${{ steps.setup-chrome.outputs.chrome-path }} --headless --no-sandbox --virtual-time-budget=100000000 --no-pdf-header-footer --print-to-pdf=dist/roelfs_cv.pdf dist/index.html
 
       - name: 📦 Upload artifact
         uses: actions/upload-pages-artifact@v4
