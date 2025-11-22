@@ -121,9 +121,7 @@ yaml_to_df(yaml_file, "education") |>
 
 Daily use of Python, R, SQL (various dialects), bash, AWS, Snowflake, Git, and common packages and module. Experience also with MATLAB, LaTeX, HTML/CSS. Have previously worked with Google Cloud, SLURM.
 
-::: {style="margin-top: 1em;font-size: 90%"}
 In addition, I'm familiar with common data science and data engineering frameworks including but not limited to Shiny, Flask, Streamlit, MLFlow, Jenkins, Docker, Airflow, TensorFlow, LangChain, dbt, and various other common tools.
-:::
 
 ## Languages {.section}
 
