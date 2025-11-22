@@ -1,24 +1,27 @@
 ---
 import "../styles/main.scss";
 import "../styles/paged.scss";
+
+import info from "../data/info.json";
 ---
 
 <html lang="no">
   <head>
     <meta charset="utf-8" />
-    <title>Daniel Roelfs' CV</title>
+    <title>{info.name}</title></head
+  >' CV
 
-    <script src="https://unpkg.com/pagedjs/dist/paged.polyfill.js" defer
-    ></script>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css"
-    />
-  </head>
+  <script src="https://unpkg.com/pagedjs/dist/paged.polyfill.js" defer></script>
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css"
+  />
 
   <body class="paged-cv">
     <main id="content">
       <slot />
     </main>
   </body>
+
+
 </html>
