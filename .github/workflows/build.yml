@@ -35,7 +35,7 @@ jobs:
         env:
           QUARTO_PRINT_STACK: true
         run: |
-          quarto render cv.qmd -P pdf_mode:false -o index.html
+          EMBED_RESOURCES=true quarto render cv.qmd -P pdf_mode:false -o index.html
         shell: bash
 
       - name: 📦 Upload artifact
