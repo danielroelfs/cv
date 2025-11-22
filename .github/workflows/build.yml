@@ -36,16 +36,7 @@ jobs:
           QUARTO_PRINT_STACK: true
         run: |
           quarto render cv.qmd -P pdf_mode:false -o index.html
-          quarto render cv.qmd -P pdf_mode:true -o tmp.html
         shell: bash
-
-      - name: 🏗️ Set up Chrome
-        uses: browser-actions/setup-chrome@v1
-        id: setup-chrome
-
-      - name: 🔨 Generate PDF
-        run: |
-          ${{ steps.setup-chrome.outputs.chrome-path }} --headless --virtual-time-budget=600000000 --allow-file-access-from-files --disable-web-security --run-all-compositor-stages-before-draw --print-to-pdf=roelfs_cv.pdf tmp.html
 
       - name: 📦 Upload artifact
         uses: actions/upload-pages-artifact@v3
