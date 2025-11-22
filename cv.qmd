@@ -7,13 +7,12 @@ format:
   html:
     include-in-header: 
         - text: |
-            <link rel="stylesheet" href="https://use.typekit.net/jxt2fnp.css">
             <link href="https://fonts.cdnfonts.com/css/cooper-hewitt" rel="stylesheet">
             <script src="https://unpkg.com/pagedjs/dist/paged.polyfill.js"></script>
             <link rel="stylesheet" type="text/css" href="css/print.css">
             <link rel="stylesheet" type="text/css" href="css/pagedjs.css" media="screen">
             <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
-    embed-resources: false
+    embed-resources: true
 params:
     pdf_mode: false
 execute:
