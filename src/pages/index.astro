@@ -1,0 +1,89 @@
+---
+import CV from "../layouts/CV.astro";
+import Header from "../components/Header.astro";
+import Section from "../components/Section.astro";
+import Entry from "../components/Entry.astro";
+import LastUpdated from "../components/LastUpdated.astro";
+
+const isPdf = import.meta.env.PUBLIC_PDF === "true";
+console.log("\nPDF mode:", isPdf);
+
+let info;
+if (isPdf) {
+  info = await import("../data/info-pdf.json").then((m) => m.default);
+} else {
+  info = await import("../data/info-online.json").then((m) => m.default);
+}
+---
+
+<CV>
+  <Header
+    name={info.name}
+    section_title={info.contact.title}
+    entries={info.contact.entries}
+  />
+
+  <Section title={info.work_experience.title}>
+    {info.work_experience.entries.map((item) => <Entry entry={item} />)}
+  </Section>
+
+  <Section title={info.education.title}>
+    {info.education.entries.map((item) => <Entry entry={item} />)}
+  </Section>
+
+  <Section title={info.technical_skills.title}>
+    {info.technical_skills.description.map((paragraph) => <p>{paragraph}</p>)}
+  </Section>
+
+  <Section title={info.language_skills.title}>
+    {
+      info.language_skills.entries.map((lang) => (
+        <div class="skill-container">
+          <div class="skill-bar" style={`width: ${lang.level}%;`}>
+            <p>
+              {lang.name} ({lang.cefr})
+            </p>
+          </div>
+        </div>
+      ))
+    }
+  </Section>
+
+  <Section title={info.awards.title}>
+    {info.awards.entries.map((item) => <Entry entry={item} />)}
+  </Section>
+
+  <div class="new-page"></div>
+
+  <Section title={info.clinical_experience.title}>
+    {
+      info.clinical_experience.description.map((paragraph) => (
+        <p>{paragraph}</p>
+      ))
+    }
+  </Section>
+
+  <Section title={info.commissions.title}>
+    {info.commissions.entries.map((item) => <Entry entry={item} />)}
+  </Section>
+
+  <Section title={info.portfolio.title}>
+    <p class="section-comment top" set:html={info.portfolio.comment} />
+    {info.portfolio.entries.map((item) => <Entry entry={item} />)}
+  </Section>
+
+  <div class="new-page"></div>
+
+  <Section title={info.publications.title}>
+    <ul class="publication-list">
+      {
+        info.publications.entries[0].references.map((ref) => (
+          <li set:html={ref} />
+        ))
+      }
+    </ul>
+    <p class="section-comment" set:html={info.publications.comment} />
+  </Section>
+
+  <LastUpdated />
+</CV>

@@ -1,0 +1,41 @@
+---
+const { entry } = Astro.props;
+---
+
+<div class="entry">
+  <div class="entry-header">
+    {
+      (() => {
+        const Wrapper = entry.url ? "a" : "span";
+
+        return (
+          <Wrapper {...(entry.url ? { href: entry.url } : {})}>
+            {entry.company ||
+              entry.degree ||
+              entry.title ||
+              entry.role ||
+              entry.organisation}
+          </Wrapper>
+        );
+      })()
+    }
+    <span class="date"
+      >{entry.start ? `${entry.start} — ${entry.end}` : entry.date}</span
+    >
+  </div>
+  {
+    (entry.role || entry.institution) && (
+      <span class="company">{entry.role || entry.institution}</span>
+    )
+  }
+
+  {
+    entry.details && (
+      <ul>
+        {entry.details.map((d: string) => (
+          <li>{d}</li>
+        ))}
+      </ul>
+    )
+  }
+</div>

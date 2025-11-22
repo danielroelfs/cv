@@ -1,16 +1,16 @@
 #!/bin/bash
 
-quarto render cv.qmd -P pdf_mode:false -o index.html
+node scripts/prepare-json.js
 
-quarto render cv.qmd -P pdf_mode:true -o tmp.html
+PUBLIC_PDF=true npm run build
 
 /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome \
     --headless \
     --virtual-time-budget=600000000 \
-    --allow-file-access-from-files \
-    --disable-web-security \
-    --run-all-compositor-stages-before-draw \
+    --no-pdf-header-footer \
     --print-to-pdf=roelfs_cv.pdf \
-    tmp.html
+    dist/index.html
 
-rm tmp.html
+PUBLIC_PDF=false npm run build
+
+mv roelfs_cv.pdf dist/

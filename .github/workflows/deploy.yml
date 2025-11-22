@@ -1,0 +1,60 @@
+name: Render and Publish
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 🧳 Checkout repository
+        uses: actions/checkout@v4
+
+      - name: 🏗️ Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: "latest"
+
+      - name: 🧱 Install dependencies
+        run: npm ci
+
+      - name: 🔧 Prepare JSON
+        run: node scripts/prepare-json.js
+
+      - name: 🛠️ Build Astro page
+        run: PUBLIC_PDF=false npm run build
+
+      - name: 🚚 Move PDF into dist
+        run: mv public/roelfs_cv.pdf dist/
+
+      - name: 📦 Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          name: cv_files
+          path: dist/
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-22.04
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: 🏗️ Set up Pages
+        id: pages
+        uses: actions/configure-pages@v5
+
+      - name: 🚀 Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+        with:
+          artifact_name: cv_files

@@ -1,0 +1,21 @@
+---
+const { name, section_title, entries } = Astro.props;
+---
+
+<header class="cv-header">
+  <h1 class="name">{name}</h1>
+  <h2 class="section-header">{section_title}</h2>
+  <div class="contact-info">
+    {
+      entries.map((item: any) => {
+        const Wrapper = item.url ? "a" : "span";
+        return (
+          <Wrapper href={item.url} class={`contact-item ${item.addclass}`}>
+            <i class={`ti ti-${item.icon}`} />
+            {item.label}
+          </Wrapper>
+        );
+      })
+    }
+  </div>
+</header>

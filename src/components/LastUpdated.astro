@@ -1,0 +1,12 @@
+---
+const date = new Date();
+const month = date.toLocaleString("default", { month: "long" });
+---
+
+<div class="last-updated">
+  <p>
+    Last updated: {date.getDate()}
+    {month}
+    {date.getFullYear()}
+  </p>
+</div>
