@@ -10,11 +10,7 @@ const { entry } = Astro.props;
 
         return (
           <Wrapper {...(entry.url ? { href: entry.url } : {})}>
-            {entry.company ||
-              entry.degree ||
-              entry.title ||
-              entry.role ||
-              entry.organisation}
+            {entry.degree || entry.title || entry.role || entry.organisation}
           </Wrapper>
         );
       })()
@@ -24,8 +20,8 @@ const { entry } = Astro.props;
     >
   </div>
   {
-    (entry.role || entry.institution) && (
-      <span class="company">{entry.role || entry.institution}</span>
+    (entry.company || entry.institution) && (
+      <span class="company">{entry.company || entry.institution}</span>
     )
   }
 
