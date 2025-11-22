@@ -34,7 +34,6 @@ jobs:
       - name: 🔨 Generate HTML
         env:
           QUARTO_PRINT_STACK: true
-          EMBED_RESOURCES: "true"
         run: |
           quarto render cv.qmd -P pdf_mode:false -o index.html
         shell: bash
