@@ -4,24 +4,24 @@ on:
       - main
 
 name: Render and Publish
-  
-permissions: 
+
+permissions:
   id-token: write
   pages: write
 
 jobs:
   build:
     runs-on: ubuntu-22.04
-    
+
     steps:
       - name: 🧳 Check out repository
         uses: actions/checkout@v4
-        
+
       - name: 🏗️ Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      
+
       - name: 🏗️ Set up R
         uses: r-lib/actions/setup-r@v2
 
@@ -36,17 +36,8 @@ jobs:
           QUARTO_PRINT_STACK: true
         run: |
           quarto render cv.qmd -P pdf_mode:false -o index.html
-          quarto render cv.qmd -P pdf_mode:true -o tmp.html
         shell: bash
 
-      - name: 🏗️ Set up Chrome
-        uses: browser-actions/setup-chrome@v1
-        id: setup-chrome
-        
-      - name: 🔨 Generate PDF
-        run: |
-          ${{ steps.setup-chrome.outputs.chrome-path }} --headless --virtual-time-budget=10000000 --print-to-pdf=roelfs_cv.pdf tmp.html
-      
       - name: 📦 Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
@@ -64,7 +55,7 @@ jobs:
       - name: 🔧 Set up Pages
         id: pages
         uses: actions/configure-pages@v5
-        
+
       - name: 🚀 Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4

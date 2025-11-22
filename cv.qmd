@@ -13,7 +13,7 @@ format:
             <link rel="stylesheet" type="text/css" href="css/print.css">
             <link rel="stylesheet" type="text/css" href="css/pagedjs.css" media="screen">
             <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
-    embed-resources: false
+    embed-resources: true
 params:
     pdf_mode: false
 execute:
@@ -21,7 +21,7 @@ execute:
     output: asis
     warning: false
 theme:
-    - css/cv_style.scss
+    - css/main.scss
 editor_options:
   chunk_output_type: console
 ---
@@ -64,7 +64,6 @@ show_email <- FALSE
 
 yaml_to_df(yaml_file, "contact_info") %>%
     {if(show_email) dplyr::filter(., str_detect(.$item, "email|e-mail", negate = TRUE)) else .} |>
-    #str_glue_data("<a class='no-hover' href='{url}'><i class='{icon}'></i></a>")
     str_glue_data("<a class='no-hover' href='{url}'><i class='ti ti-{icon}'></i></a>")
 
 if (params$pdf_mode) {
